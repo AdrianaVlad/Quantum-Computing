@@ -18,12 +18,13 @@ U=results.get_unitary(circ1,decimals=4)
 U=np.matrix(U)
 print("Matricea U =",U)
 Uc=np.matrix(np.conj(np.transpose(U)))
-t1=(round(np.linalg.norm(U*Uc-Uc*U),4))
+t1=(np.linalg.norm(U*Uc-Uc*U))
+print(U*Uc-Uc*U)
 print("||U*Uc-Uc*U|| = ", t1, " (if=0, U*Uc=Uc*U)")
 I=np.identity(4)
-t2=(round(np.linalg.norm(Uc*U-I),4))
+t2=(np.linalg.norm(Uc*U-I))
 print("||Uc*U-I4|| = ", t2, " (if=0, Uc*U=I4)")
-if t1==0 and t2==0:
+if t1<=0.05 and t2<=0.05:
     print("U este unitara")
 else:
     print("Error: U nu e unitara")
