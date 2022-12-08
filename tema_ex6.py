@@ -11,7 +11,7 @@ circ.ch(0,1)
 circ.cx(1,2)
 circ.cx(0,1)
 circ.x(0)
-#circ.rz(4*pi/3,1) circ.rz(2*pi/3,0) pt cealalta stare (0)
+#circ.p(4*pi/3,1) circ.p(2*pi/3,0) pt cealalta stare (0)
 #aici: starea 1
 circ.p(2*pi/3,1)
 circ.p(4*pi/3,0)
